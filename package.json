@@ -1,0 +1,67 @@
+{
+  "name": "pi-theme-collection",
+  "version": "0.1.0",
+  "description": "A set of theme presets for Pi. Each one changes how the composer, status line, startup view, messages and tool output look. Colours still come from Pi's own theme settings.",
+  "license": "MIT",
+  "author": "gnoul_ <ttluong4869@gmail.com> (https://github.com/gnoul4869)",
+  "maintainers": [
+    "gnoul_ <ttluong4869@gmail.com> (https://github.com/gnoul4869)"
+  ],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnoul4869/pi-theme-collection.git"
+  },
+  "homepage": "https://github.com/gnoul4869/pi-theme-collection#readme",
+  "bugs": {
+    "url": "https://github.com/gnoul4869/pi-theme-collection/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "pi-theme",
+    "theme-collection",
+    "appearance-preset",
+    "pi-coding-agent",
+    "omp",
+    "oh-my-pi",
+    "extension",
+    "tui",
+    "terminal-theme",
+    "status-line",
+    "theme"
+  ],
+  "pi": {
+    "extensions": [
+      "./dist/extensions/pi-theme-collection.ts"
+    ],
+    "themes": [
+      "./themes"
+    ],
+    "image": "https://raw.githubusercontent.com/gnoul4869/pi-theme-collection/main/media/gallery-preview.png?v=gallery-5"
+  },
+  "files": [
+    "dist/**/*.ts",
+    "themes",
+    "README.md",
+    "docs/theme-switching.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "verify": "node scripts/verify-bundle.mjs",
+    "test": "node scripts/theme-switch.test.mjs",
+    "testWidgets": "node scripts/status-line-widget.test.mjs",
+    "testShrink": "node scripts/status-shrink.test.mjs",
+    "testEditor": "node scripts/editor-render.test.mjs",
+    "check": "npm run verify && npm run test && npm run testWidgets && npm run testShrink && npm run testEditor"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
